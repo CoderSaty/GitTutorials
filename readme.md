@@ -81,6 +81,7 @@ git checkout master ==> this will take you back to the latest commit
     * you can also revert the revert commit
     * there are three different stages of git reset soft mix and hard . soft is just like git checkout and hard is like hard reset.
     * git reset resets all the commit upto that commit
+    * HEAD is always the currently selected commit
 
 ```
 git revert commit id ==>  reverts the changes made int that commit id
