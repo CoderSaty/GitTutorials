@@ -90,7 +90,7 @@ git reset --hard  commit id ==> resets all the commit upto that commit id
 ### create a .gitignore file
 
     * it is a file that has a list of all the files and directory that we do not want to track.
-    *
+    * the file does not have any name
 
 ```
 
