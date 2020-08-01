@@ -91,7 +91,8 @@ git reset --hard  commit id ==> resets all the commit upto that commit id
 
     * it is a file that has a list of all the files and directory that we do not want to track.
     * the file does not have any name
+    * create the file list all the files and directory you need to ignore commit the change
 
 ```
-
+git rm - r --cached . ==> this will remove the cached memory from the staging area
 ```
