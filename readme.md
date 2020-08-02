@@ -148,10 +148,12 @@ git  merge "name of the branch" => this will merge the specified branch with the
 
 #### conneecting to remote repo through our terminal
 
+- A remote origin is a link to access your remote repository.
+
 ```
  git init ==> intialize the repo
  git remote add origin "url of the repo" ==> to connect with the remote repo the local repo
- git remote -v ==> to check whether the remote repo is connected or not
+ git remote -v ==> to check whether the remote repo is connected or not (it will show us the remote origin we use to push and pull information)
 ```
 
 #### Push & Pull System
@@ -182,6 +184,10 @@ git push ==> once pushed we can use this simply and we dont have to specify the 
   2. fix that error
   3. merge with master branch
   4. delete that branch
+
+* we can push only one branch at a time to a remote repository.
+* we can interact with our remote repo through push pull cycle.
+
 -
 
 ```
@@ -198,3 +204,16 @@ git push origin rectify ==> this will now push the rectify branch
 ** to remove the branch retify **
 git push origin --delete rectify ==> deletes the remote rectify branch
 ```
+
+### Git GUI (Sourcetree)
+
+- If we do not love working with terminal we can also use git gui such as sourcetree which is more user friendly. BTW I prefer terminal.
+
+### GIT REBASE
+
+- git merge create a new commit that has all of the changes of both the branch and combines them together.
+- git rebase moves each seperate commit on to the tip of the branch that we are trying to move it onto.
+- git rebase not only move the branch but they instead create new commit.
+- usecase :-
+  1. when there are several developers in the team and you are working on some other branch and other devlopers have made commit to the master branch now if you will merge it will give a conflict so here we can use rebase instead of merge.
+- I try to stick with merge
