@@ -2,9 +2,8 @@
 
 ### Software Required...
 
-1. Git Bash
-2. Ubuntu Shell
-3. Git (according to your os)
+1. Ubuntu Shell
+2. Git (according to your os)
 
 ### TO check git is installed or not
 
@@ -27,6 +26,9 @@ cd ~ --> to go the home directory
 mkdir foldername --> this will create a folder with given folder name
 cd path --> to move to that path
 cd== change directory
+pwd ==> this will display the current working directory of the terminal
+ls -la ==> in order to see all the hidden git files
+
 ```
 
 ### working with files and directory
@@ -54,14 +56,19 @@ git status --> status of the staging area
 git commit -m "message" --> commiting to the file
 git config --global user.email "youremail" --> this will set the user email this command is run once for configuration
 git config --global user.name "your name" --> this will set the user name this command is run once for configuration
+git config --list --> this will list all of our settings
 git --help --> this will open the list of all git commads
 git commit --help --> this will open the manual for the git commit
 git commit -a -m "your message" --> this will commit all the tracked files with the commit message
 git log --> this will give the list of all the commits you have made
+git log -- author="codersaty" ==> this will only show the commits made by author codersaty. you need not to type the full name laways.
 git log --oneline --> this will show all the commits in a single line
 git rm nameoffile.extension --> this will remove the file from the repository
 git rm -f nameoffile.extension --> this will remove the file from repository forcefully
 git rm --cached nameoffile.extension --> this will remove the file from the staging area
+git diff ==> this will show the changes you have made {this only show the difference between working copy and repository}
+git diff --staged ==> this will show the differences when the file is in staging area
+
 ```
 
 ### Tracking our git commit history
@@ -205,7 +212,7 @@ git push origin rectify ==> this will now push the rectify branch
 git push origin --delete rectify ==> deletes the remote rectify branch
 ```
 
-### Git GUI (Sourcetree)
+### Git GUI (Sourcetree or Github Desktop)
 
 - If we do not love working with terminal we can also use git gui such as sourcetree which is more user friendly. BTW I prefer terminal.
 
@@ -217,3 +224,93 @@ git push origin --delete rectify ==> deletes the remote rectify branch
 - usecase :-
   1. when there are several developers in the team and you are working on some other branch and other devlopers have made commit to the master branch now if you will merge it will give a conflict so here we can use rebase instead of merge.
 - I try to stick with merge
+
+### how to rename a file using git?
+
+- the process is like that(it thinks it deleted the previous file and created a new file with same content)
+
+```
+git add newfilename
+git rm oldfile
+git status
+git commit -m "message"
+```
+
+- easy way
+
+```
+git mv oldfile.extension newfile.extension
+```
+
+### how to move a file into a folder
+
+```
+git mv filename.extension foldername/newname.extension
+```
+
+### how to commit direcctly to the repository
+
+```
+git commit -am "commit message" ==> shortcut for both add and commit
+```
+
+```
+git checkout -- index.html
+```
+
+this will take the copy of index.html from repository and replace it with the file in your working directory.
+
+```
+git reset HEAD filename
+```
+
+this command will remove the file mentioned from the staging area
+
+Note:-
+
+- you can see all the commits by clicking on commits tab of any repo
+
+# explaining pull request process
+
+- go to any person repo fork it
+- create your new branch
+- commit your changes
+- create a pull request
+  1. by going to pull request tab
+- if the person found it useful he will fork it otherwise close it
+- delete the branch you dont need
+
+# if someone made a pull request to your project
+
+- you will be able to see it by clicking on the pull request tab
+- a pull request have 3 section {conversation(to chat), commits(to see all the commit), files changed(the changes in the file)}
+- close merge/ confirm merge
+
+# Important github buttons
+
+- for a file
+
+1. Raw :- A raw view of file without any text formating
+2. Blame :- you can see who added each line on any repo
+3. History :- to see the commits made for any particular file
+
+- for entire repo
+
+1. Watch :- {following this project}
+2. Star :- {bookmarking this project}
+3. fork :- {making a copy of that repo on your profile }
+4. Issues :- {a typical to do list of bugs to fix by the person of the team you want} (title , description {code,image, text formating and more})
+5. Label :- we add it to the issue {generally of two types :- bugs and enhancement}(you can also make your own label)
+6. Assignes :- the person who is assigned to resolve the issue
+
+# Github Wiki
+
+- is is a area that provide more info about our repo
+- there is no such rule you can add whatever you want
+- you can add a custom sidebar to your all wiki pages
+
+# github Organization & team
+
+- you need it when there is a team to work on the project
+- it just like a company or something
+- manage teammate roles easily {you can also decide what they can access}
