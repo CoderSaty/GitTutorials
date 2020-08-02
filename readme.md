@@ -97,3 +97,48 @@ git reset --hard  commit id ==> resets all the commit upto that commit id
 ```
 git rm - r --cached . ==> this will remove the cached memory from the staging area
 ```
+
+### git branches
+
+    * git branches are a way to create a separate development path without overiding or creating copies of your project
+    * branches can be added deleted and merged just like regular commits
+    * braches can be used to seperate different end goals of your project
+    * create seperate bracnhes for each stage of developement.
+    * you have to make the intial commit before creating any branch otherwise your  development branch will be considered as master branch
+    * you have to make the commit in the similar manner you have to just switch to the required branch
+    * be careful and cautiois on commiting something
+    * Merging Branches :- bringing all the branches together
+    * there are two merge commands one merges to current directory and the in the other command we can specify the source and destination
+    * a branch can be defined as a chain of commits that does not interfere with other branch
+    * HEAD is a pinter that will point to the current brach
+
+```
+    * git branch "name of the branch" ==> create a new branch with the given name
+    * git checkout -b "name of the branch" ==> this will create the new branch with the given name and will switch to it.
+    * git checkout master ==> this will help them to switch to master branch
+    * git branch -a ==> this will list all the branch with a star on the current branch
+    * git branch -d "name of the branch" ==> this will delete the specified branch
+    * git  merge "name of the branch" => this will merge the specified branch with the current branch you are working on
+
+```
+
+### Github
+
+    * what is github? => it is an application that allows you to store remote repo on their servers.
+    * benefits :-
+        1. provides a user friendly platform to interract with and manage your repo
+        2. it is public and open source(social coding)
+        3. used as a portfolio
+        4. open oppurtunities you might not have with a local repo
+        5. easy acess from any device
+        6. industry standard
+    * creating a github account
+    * github documentation
+    * creating first repo on github
+    * there are various licesence
+    * Issues (can be listed by the contributors)
+    * pull request (anyone wants to pull your repo on their local site)
+    * wiki (you can place the large documentation of your software here)
+    * insights (records of the repository)
+    * settings (delete, acess,change Name,collaborators)
+    * deploy key (to deploy repo on some site)
